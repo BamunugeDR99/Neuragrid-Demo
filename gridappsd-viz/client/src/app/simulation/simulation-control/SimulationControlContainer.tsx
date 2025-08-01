@@ -337,7 +337,7 @@ export class SimulationControlContainer extends Component<Props, State> {
               <p
                 className='ai-recommendation-title'
                 style={{ margin: '0 0 8px 0' }}>
-                <strong>Recommended Action:</strong>
+                <strong>Neuragrid Recommended Action:</strong>
               </p>
               <p
                 style={{
@@ -345,7 +345,11 @@ export class SimulationControlContainer extends Component<Props, State> {
                   fontSize: '14px',
                   color: '#495057'
                 }}>
-                Neuragrid AI has identified the optimal solution to restore normal power flow and resolve the congestion.
+                Neuragrid AI has identified the following actions to resolve the congestion:
+                <br />
+                1. Implement Topology Update – Reconfigure switch SW4 to re-establish continuity on the downstream circuit
+                <br />
+                2. Execute Restoration Plan – Reconnect subsequent substations
               </p>
               <button
                 className='fault-alert-modal__take-action-btn'
@@ -373,7 +377,7 @@ export class SimulationControlContainer extends Component<Props, State> {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = '0 2px 4px rgba(40, 167, 69, 0.2)';
                 }}>
-                Neuragrid Recommendations - Close Switch:sw4
+                Take Recommended Action
               </button>
             </div>
           )}
