@@ -4,11 +4,11 @@ RUN apk add --no-cache python3 make g++
 
 WORKDIR /app
 
-COPY server/package*.json ./
-RUN npm install
+COPY client/package*.json ./
+RUN npm install --legacy-peer-deps
 
-COPY server/ ./
+COPY client/ ./
 
-EXPOSE 8082
+EXPOSE 3000
 
 CMD ["npm", "start"]
