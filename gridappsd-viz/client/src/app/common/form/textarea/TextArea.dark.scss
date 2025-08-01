@@ -1,0 +1,115 @@
+@import '@constants.dark';
+@import 'TextArea.common';
+
+.textarea {
+    .CodeMirror {
+        background-color: transparent;
+        background-color: #363636;
+
+        pre.CodeMirror-line {
+            color: $primary-text-color;
+        }
+    }
+
+    .CodeMirror-cursor {
+        border-color: #fff;
+    }
+
+    .CodeMirror-selected,
+    .CodeMirror-focused .CodeMirror-selected {
+        background: #756b6b;
+    }
+
+    .CodeMirror-gutters {
+        background-color: rgba($primary-text-color, 0.5);
+        border-right-color: #b15373;
+    }
+
+    .CodeMirror-linenumber {
+        color: #fff;
+        background-color: rgb(155, 155, 155);
+    }
+
+    .errored-line {
+        text-decoration-color: #f00;
+    }
+}
+
+.textarea__input-box-container {
+    border: 2px solid rgba($primary-text-color, 0.5);
+}
+
+.textarea__input-box {
+
+    &.focused {
+        &::before {
+            background-color: $primary-text-color;
+        }
+
+        &::after {
+            background-color: $primary-text-color;
+        }
+
+        &~.textarea__input-box-focus-indicator {
+            &::before {
+                background-color: $primary-text-color;
+            }
+
+            &::after {
+                background-color: $primary-text-color;
+            }
+        }
+    }
+}
+
+.textarea__input-box,
+.textarea__input-box-focus-indicator {
+
+    &::before,
+    &::after {
+        background-color: rgba($primary-text-color, 0.5)
+    }
+}
+
+.textarea__input-box-resize-handle {
+    border-right: 3px solid #999;
+    border-bottom: 3px solid #999;
+}
+
+.textarea.invalid .textarea__input-box-container {
+    border-color: red;
+}
+
+.textarea.disabled {
+
+    .textarea__input-box-container {
+        border: 2px solid #e6e6e620;
+    }
+
+    .textarea__input-box {
+        background-color: $theme-color;
+        color: rgba($primary-text-color, 0.1);
+    }
+
+    .textarea__input-box-resize-handle {
+        opacity: 0.2;
+    }
+
+    .CodeMirror pre.CodeMirror-line {
+        color: #6c6c6c;
+    }
+
+    .CodeMirror-gutters {
+        background-color: rgba(97, 97, 97, 0.5);
+        border-right-color: #4c4a4b;
+    }
+
+    .CodeMirror-linenumber {
+        color: #6c6c6c;
+        background-color: transparent;
+    }
+
+    .errored-line {
+        text-decoration-color: #6c6c6c;
+    }
+}

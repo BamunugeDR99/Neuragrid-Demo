@@ -1,0 +1,23 @@
+.message-banner {
+    position: absolute;
+    z-index: 15;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+
+    .backdrop {
+        z-index: -1;
+    }
+}
+
+.message-banner__content {
+    text-align: center;
+    font-size: 45px !important;
+    padding: 20px 5px;
+    box-sizing: border-box;
+    width: 100%;
+}

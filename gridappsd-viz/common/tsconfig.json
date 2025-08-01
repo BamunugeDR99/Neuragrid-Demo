@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "declaration": true,
+        "outDir": "dist",
+        "baseUrl": "./",
+        "module": "commonjs",
+        "target": "ES2017",
+        "sourceMap": true,
+        "allowJs": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    },
+    "exclude": [
+        "dist"
+    ]
+}

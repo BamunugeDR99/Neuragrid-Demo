@@ -1,0 +1,14 @@
+@import '@constants.dark';
+@import 'Settings.common';
+
+.settings__trigger {
+    color: #ff0 !important;
+
+    .ripple-effect {
+        background-color: #ff0;
+    }
+}
+
+.settings__menu__item__name {
+    color: $label-color;
+}

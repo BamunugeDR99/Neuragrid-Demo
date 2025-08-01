@@ -1,0 +1,35 @@
+.simulation-vs-time-series-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .form-control.select {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .form-control__label {
+            width: initial;
+            margin-right: 5px;
+        }
+    }
+}
+
+.simulation-vs-time-series__file-upload {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 20px;
+    align-items: flex-start;
+}
+
+.simulation-vs-time-series__file-upload__file-name {
+    display: inline-block;
+    color: #fff;
+    margin-top: 5px;
+    opacity: 0.5;
+    font-style: italic;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 240px;
+}

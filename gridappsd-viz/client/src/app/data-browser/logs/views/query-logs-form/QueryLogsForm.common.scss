@@ -1,0 +1,25 @@
+.query-logs-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.query-logs-form__panel-container {
+    display: flex;
+}
+
+.query-logs-form__panel.left {
+    margin-right: 90px;
+
+    .form-control__label {
+        width: 170px;
+    }
+}
+
+.query-logs-form__panel.right .form-control__label {
+    width: 130px;
+}
+
+.query-logs-form__submit {
+    transform: translate(10px, -5px);
+    align-self: flex-start;
+}

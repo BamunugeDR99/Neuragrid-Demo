@@ -1,0 +1,30 @@
+@import '@constants.dark';
+@import 'Input.common';
+
+.input-field__input {
+    border-bottom: 2px solid rgba($primary-text-color, 0.5);
+    color: $primary-text-color;
+}
+
+.input-field__ripple-bar {
+    background-color: $primary-text-color;
+}
+
+.form-control.invalid {
+    .input-field__input {
+        border-bottom-color: red;
+        color: red;
+    }
+
+    .input-field__ripple-bar {
+        background-color: red;
+    }
+}
+
+.form-control.disabled {
+    .input-field__input {
+        color: rgba($primary-text-color, 0.1);
+        border-bottom-color: rgba($primary-text-color, 0.1);
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,21 @@
+@import '@constants.dark';
+@import 'SimulationStatusLoggerMessage.common';
+
+.simulation-status-logger-message {
+    border-bottom: 2px solid #a2a6a8;
+
+    table td:first-child>div {
+        color: $active-item-color;
+    }
+}
+
+$logLevels: FATAL ERROR WARN INFO DEBUG TRACE;
+$logLevelColors: #B71C1C #F00 #FFFF00 #F0F4C3 #686868 #C0CA33;
+$textColors: #fff #fff #000 #000 #fff #000;
+
+@for $index from 1 through length($logLevels) {
+    .simulation-status-logger-message.#{nth($logLevels, $index)} {
+        background-color: #{nth($logLevelColors, $index)};
+        color: #{nth($textColors, $index)} !important;
+    }
+}

@@ -1,0 +1,69 @@
+@import '@constants.common';
+
+.form-group {
+    position: relative;
+}
+
+.form-group__header {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.form-group__header:empty {
+    display: none;
+}
+
+.form-group__header:not(:empty)~.form-group__controls {
+    padding: 0 1.5em;
+    overflow: hidden;
+}
+
+.form-group__header__button-group {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+
+    &>i.material-icons {
+        font-size: 1.25em;
+        transition: transition(transform);
+        transform-origin: 50% 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+}
+
+.form-group__header__button-group:empty {
+    display: none;
+}
+
+.form-group__header__toggle {
+
+    i.material-icons {
+        font-size: 3em;
+        transition: transition(transform);
+        transform-origin: 50% 50%;
+    }
+
+    &.expanded i.material-icons {
+        transform: rotate(180deg);
+    }
+
+    &.collapsed i.material-icons {
+        transform: rotate(0);
+    }
+}
+
+.form-group__controls {
+    position: relative;
+    transition: transition(max-height);
+}

@@ -1,0 +1,17 @@
+@import './FaultAlertModal.common';
+
+[theme='dark'] {
+  --fault-modal-background: #1e1e1e;
+  --fault-modal-border: #404040;
+  --fault-modal-title-color: #ffffff;
+  --fault-modal-text-color: #e0e0e0;
+  --fault-modal-emphasis-color: #81c784;
+  --fault-modal-footer-background: #252525;
+  --fault-modal-close-button-background: #333333;
+  --fault-modal-close-button-color: #e0e0e0;
+  --fault-modal-close-button-border: #555555;
+  --fault-modal-close-button-hover-background: #444444;
+  --fault-modal-close-button-hover-color: #ffffff;
+  --fault-modal-close-button-hover-border: #666666;
+  --fault-modal-focus-color: #4fc3f7;
+}

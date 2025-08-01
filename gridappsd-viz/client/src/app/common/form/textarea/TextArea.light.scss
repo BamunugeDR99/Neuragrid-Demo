@@ -1,0 +1,88 @@
+@import 'TextArea.common';
+
+.textarea .CodeMirror-linenumber {
+    background-color: #f7f7f7;
+}
+
+.textarea__input-box-container {
+    border: 2px solid #ccc;
+}
+
+.textarea__input-box {
+
+    &.focused {
+        &::before {
+            background-color: #639;
+        }
+
+        &::after {
+            background-color: #639;
+        }
+
+        &~.textarea__input-box-focus-indicator {
+            &::before {
+                background-color: #639;
+            }
+
+            &::after {
+                background-color: #639;
+            }
+        }
+    }
+
+    .errored-line {
+        text-decoration-color: #f00;
+    }
+}
+
+.textarea__input-box,
+.textarea__input-box-focus-indicator {
+
+    &::before,
+    &::after {
+        background-color: #639;
+    }
+}
+
+.textarea__input-box-resize-handle {
+    border-right: 3px solid #999;
+    border-bottom: 3px solid #999;
+}
+
+.textarea.invalid .textarea__input-box-container {
+    border-color: red;
+}
+
+.textarea.disabled {
+    .textarea__input-box-container {
+        border: 2px solid #eee;
+    }
+
+    .textarea__input-box-resize-handle {
+        opacity: 0.2;
+    }
+
+    .textarea__input-box {
+        background-color: #f9f9f9;
+        color: #ddd;
+    }
+
+    .CodeMirror pre.CodeMirror-line {
+        color: #dfdfdf;
+    }
+
+    .CodeMirror-gutters {
+        background-color: #fff;
+        border-right-color: #ececec;
+    }
+
+    .CodeMirror-linenumber {
+        color: #dfdfdf;
+        background-color: transparent;
+    }
+
+    .errored-line {
+        text-decoration-color: #dfdfdf;
+    }
+
+}

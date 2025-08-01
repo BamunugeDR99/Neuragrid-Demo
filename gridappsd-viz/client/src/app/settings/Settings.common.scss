@@ -1,0 +1,42 @@
+.settings__trigger {
+    cursor: pointer;
+}
+
+.settings-dialog .dialog-content {
+    padding: 0;
+}
+
+.settings__menu {
+    width: 270px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    width: 250px;
+    margin: 10px 0;
+    padding: 0;
+
+    &__item {
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        &__action {
+            position: relative;
+            margin-left: auto;
+
+            &.toggle-logging {
+                transform: translate(-13px, 0px);
+            }
+        }
+    }
+
+    .select.form-control {
+        margin: 0;
+    }
+
+    .select__option-list__opener {
+        min-width: 100px;
+    }
+}

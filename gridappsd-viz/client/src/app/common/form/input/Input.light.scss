@@ -1,0 +1,28 @@
+@import 'Input.common';
+
+.input-field__input {
+    border-bottom: 2px solid #e3e3e3;
+}
+
+.input-field__ripple-bar {
+    background-color: #3f51b5;
+}
+
+.form-control.invalid {
+    .input-field__input {
+        border-bottom-color: red;
+        color: red;
+    }
+
+    .input-field__ripple-bar {
+        background-color: red;
+    }
+}
+
+.form-control.disabled {
+    .input-field__input {
+        color: #cdcdcd;
+        border-bottom-color: #cdcdcd;
+        pointer-events: none;
+    }
+}

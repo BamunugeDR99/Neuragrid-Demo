@@ -1,0 +1,42 @@
+.drawer {
+    position: fixed;
+    z-index: 24;
+    top: 0;
+    min-width: 350px;
+
+    .backdrop {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+    }
+}
+
+.drawer.closed {
+    pointer-events: none;
+}
+
+.drawer-items {
+    transition-timing-function: cubic-bezier(0, 0.61, 0.2, 1.01);
+    transition-duration: 550ms;
+    transition-property: transform, visibility, box-shadow;
+    z-index: 24;
+    position: relative;
+    top: 0;
+    left: -105%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    overflow: hidden auto;
+    visibility: hidden;
+}
+
+.drawer.closed>.drawer-items {
+    transform: translateX(0);
+    visibility: hidden;
+}
+
+.drawer.open>.drawer-items {
+    transform: translateX(105%);
+    visibility: visible;
+}

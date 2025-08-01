@@ -1,0 +1,45 @@
+@import '@constants.dark';
+@import 'DataBrowser.common';
+@import 'constants.dark';
+
+.data-browser .vertical-divider {
+    box-shadow: 0 0 2px #888;
+}
+
+.data-browser__selection__item {
+    border: $border;
+    box-shadow: $box-shadow;
+    color: #9e917b;
+}
+
+.data-browser__selection__item.selected {
+    color: $active-item-color;
+
+    &:before {
+        background-color: $theme-color;
+    }
+
+    &:after {
+        border-top: $border;
+        border-bottom: $border;
+        background-color: $theme-color;
+    }
+}
+
+.data-browser__request,
+.data-browser__response {
+    border: $border;
+    color: $primary-text-color;
+    box-shadow: $box-shadow;
+}
+
+.data-browser__response {
+    &::-webkit-scrollbar {
+        background: $theme-color;
+        box-shadow: 0 0 3px #808080 inset;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color;
+    }
+}

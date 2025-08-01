@@ -1,0 +1,16 @@
+dist
+
+node_modules*
+
+ignores
+
+fncs-output.ts
+node_modules/*
+
+.DS_Store
+
+pull.sh
+
+tsconfig.tsbuildinfo
+
+.eslintcache

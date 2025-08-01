@@ -1,0 +1,139 @@
+.textarea {
+    align-items: flex-start;
+
+    .CodeMirror {
+        height: 100%;
+    }
+
+    .CodeMirror-line {
+        pointer-events: none;
+    }
+
+    .CodeMirror-gutters {
+        z-index: 0;
+    }
+
+    .errored-line {
+        display: inline-block;
+        text-decoration-style: wavy;
+        text-decoration-line: underline;
+    }
+}
+
+.textarea__input-box-container {
+    position: relative;
+    width: 600px;
+    height: 150px;
+    max-height: 150px;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.textarea__input-box {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    white-space: pre;
+    vertical-align: top;
+    transition: border-color 0.25s ease;
+    outline: none;
+
+    &::before {
+        top: 0;
+        left: 0;
+        transform-origin: 0% 50%;
+    }
+
+    &::after {
+        border-bottom-right-radius: 10px;
+        right: 0;
+        top: 0;
+        transform-origin: 50% 0%;
+    }
+}
+
+.textarea__input-box,
+.textarea__input-box-focus-indicator {
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        transition: transform 0.4s 0s ease;
+        z-index: 15;
+        pointer-events: none;
+    }
+
+    &::before {
+        width: 100%;
+        height: 3px;
+        transform: scale(0, 0);
+    }
+
+    &::after {
+        width: 3px;
+        height: 100%;
+        transform: scale(0, 0);
+    }
+}
+
+.textarea__input-box.focused {
+    &::before {
+        transform: scale(1, 1);
+    }
+
+    &::after {
+        transition-delay: 0.25s;
+        transform: scale(1, 1);
+    }
+
+    &~.textarea__input-box-focus-indicator {
+        &::before {
+            transform: scale(1, 1);
+        }
+
+        &::after {
+            transition-delay: 0.25s;
+            transform: scale(1, 1);
+        }
+    }
+}
+
+.textarea__input-box-focus-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    &::before {
+        left: 0;
+        bottom: 0;
+        transform-origin: 100% 50%;
+    }
+
+    &::after {
+        left: 0;
+        top: 0;
+        transform-origin: 50% 100%;
+    }
+}
+
+.textarea__input-box-resize-handle {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize;
+    border-bottom-right-radius: 5px;
+}
+
+.form-control.disabled .textarea__input-box-container {
+    pointer-events: none;
+}
